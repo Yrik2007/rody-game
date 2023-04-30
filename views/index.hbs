@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>RODYgame</title>
+</head>
+<body>
+    <header>
+        <div class="container_header">
+            <div class="cont_head_info_on">
+                <div class="img_head_logo_cont">
+                    <a href="/">
+                        <img src="assets/logo.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="cont_head_info_janrs">
+                <div class="cont_text_janrs">
+                    <div class="text_janr">
+                        <a href="/shoot?page=1" class="text_j_contsp">Шутеры</a>
+                    </div>
+                    <div class="text_janr">
+                        <a href="/arcade?page=1" class="text_j_contsp">Аркады</a>
+                    </div>
+                    <div class="text_janr">
+                        <a href="/rpg?page=1" class="text_j_contsp">RPG</a>
+                    </div>
+                    <div class="text_janr">
+                        <a href="/race?page=1" class="text_j_contsp">Гонки</a>
+                    </div>
+                    <div class="text_janr">
+                        <a href="/fight?page=1" class="text_j_contsp">Драки</a>
+                    </div>
+                    <div class="text_janr">
+                        <a href="/advanture?page=1" class="text_j_contsp">Приключения</a>
+                    </div>
+                    <div class="text_janr">
+                        <a href="/quests?page=1" class="text_j_contsp">Квесты</a>
+                    </div>
+                    <div class="text_janr">
+                        <a href="/logic?page=1" class="text_j_contsp">Логические</a>
+                    </div>
+                    <div class="text_janr">
+                        <a href="/simulator?page=1" class="text_j_contsp">Симуляторы</a>
+                    </div>
+                    <div class="text_janr">
+                        <a href="/sport?page=1" class="text_j_contsp">Спорт</a>
+                    </div>
+                    <div class="text_janr">
+                        <a href="/strategies?page=1" class="text_j_contsp">Стратегии</a>
+                    </div>
+                    <div class="text_janr">
+                        <a href="/horror?page=1" class="text_j_contsp">Хоррор</a>
+                    </div>
+                    <div class="text_janr">
+                        <a href="/action?page=1" class="text_j_contsp">Экшн</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </header>
+
+    <main>
+        <div class="container_games">
+            <div class="cont_info_game">
+                <div class="info_option_game">
+                    <p>{{category}}</p>
+                </div>
+                <div class="container_game_info">
+                    {{#each array}}
+                        <div class="cont_part_game">
+                            <a href="/game?id={{this.id}}" class="a_link_cont_game">
+                                <div class="img_game">
+                                    <img class="img_game_part" src="{{this.image}}" alt="">
+                                </div>
+                                <div class="info_name_game">
+                                    <p>{{this.name}}</p>
+                                </div>
+                                <div class="info_description_text_game">
+                                    <p>{{this.smallDescription}}</p>
+                                </div>
+                            </a>
+                        </div>
+                    {{/each}}
+                </div>
+                <div class="link_page_game">
+                    {{!-- {{#if janr}}
+                    <p>
+                        {{#if scrollPagePrev}}<a href="/{{genre}}?page={{prevPage}}">Предыдущая</a> {{/if}} / {{#if scrollPageNext}} <a href="/{{genre}}?page={{nextPage}}">Следующая</a> {{/if}}
+                    </p>
+                    {{/if}} --}}
+                    {{!-- <p>
+                        <a href="/{{}}/page">1</a> / <a href="">2</a> / <a href="">3</a> / <a href="">4</a> ..
+                    </p> --}}
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

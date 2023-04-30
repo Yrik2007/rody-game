@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/game.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="container_header">
+            <div class="cont_head_info_on">
+                <div class="img_head_logo_cont">
+                    <a href="/">
+                        <img src="assets/logo.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="cont_head_info_janrs">
+                <div class="cont_text_janrs">
+                    <div class="text_janr">
+                        <a href="/shoot?page=1" class="text_j_contsp">Шутеры</a>
+                    </div>
+                    <div class="text_janr">
+                        <a href="/arcade?page=1" class="text_j_contsp">Аркады</a>
+                    </div>
+                    <div class="text_janr">
+                        <a href="/rpg?page=1" class="text_j_contsp">RPG</a>
+                    </div>
+                    <div class="text_janr">
+                        <a href="/race?page=1" class="text_j_contsp">Гонки</a>
+                    </div>
+                    <div class="text_janr">
+                        <a href="/fight?page=1" class="text_j_contsp">Драки</a>
+                    </div>
+                    <div class="text_janr">
+                        <a href="/advanture?page=1" class="text_j_contsp">Приключения</a>
+                    </div>
+                    <div class="text_janr">
+                        <a href="/quests?page=1" class="text_j_contsp">Квесты</a>
+                    </div>
+                    <div class="text_janr">
+                        <a href="/logic?page=1" class="text_j_contsp">Логические</a>
+                    </div>
+                    <div class="text_janr">
+                        <a href="/simulator?page=1" class="text_j_contsp">Симуляторы</a>
+                    </div>
+                    <div class="text_janr">
+                        <a href="/sport?page=1" class="text_j_contsp">Спорт</a>
+                    </div>
+                    <div class="text_janr">
+                        <a href="/strategies?page=1" class="text_j_contsp">Стратегии</a>
+                    </div>
+                    <div class="text_janr">
+                        <a href="/horror?page=1" class="text_j_contsp">Хоррор</a>
+                    </div>
+                    <div class="text_janr">
+                        <a href="/action?page=1" class="text_j_contsp">Экшн</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container_games">
+            <div class="cont_info_game">
+                <div class="cont_game_name">
+                    <p>{{ games.name }}</p>
+                </div>
+                <div class="cont_game_information_to_game">
+                    <div class="container_image_game">
+                        <img src="{{games.image}}" alt="">
+                    </div>
+                    <div class="container_information_to_game">
+                        <div class="info_cont_header_game_text">
+                            <p>Информация о игре</p>
+                        </div>
+                        <div class="container_info_header_togames">
+                            <div class="text_info_gamestogo">
+                                <p>Год выпуска: <span class="text_info_date"> {{games.public}} </span></p>
+                            </div>
+                            <div class="text_info_gamestogo">
+                                <p>Жанр: <span class="text_info_date">{{games.janr}}</span></p>
+                            </div>
+                            <div class="text_info_gamestogo">
+                                <p>Разработчик: <span class="text_info_date">{{games.developer}}</span></p>
+                            </div>
+                            <div class="text_info_gamestogo">
+                                <p>Версия: <span class="text_info_date">{{games.version}}</span></p>
+                            </div>
+                            <div class="text_info_gamestogo">
+                                <p>Язык интерфейса: <span class="text_info_date">{{games.languageGame}}</span></p>
+                            </div>
+                            <div class="text_info_gamestogo">
+                                <p>Таблетка: <span class="text_info_date">{{games.tabletka}}</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container_game_header_description">
+                    <div class="cont_header_description_game_title">
+                        <p>Описание</p>
+                    </div>
+                    <div class="cont_text_description">
+                        <div class="text_description">
+                            <p>{{games.description}}</p>
+                        </div>
+                    </div>
+                    <div class="container_additional_image_game">
+                        <div class="add_image_to_game">
+                            <img src="{{games.add1Image}}" alt="">
+                        </div>
+                        <div class="add_image_to_game">
+                            <img src="{{games.add2Image}}" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container_info_requirements_min">
+                    <div class="title_header_min_req">
+                        <p>Минимальные системные требования</p>
+                    </div>
+                    <div class="cont_req_text_min_game">
+                        <div class="text_min_req_game">
+                            <p>Операционная система: <span class="info_text_min_requirement">{{games.operation}}</span></p>
+                        </div>
+                        <div class="text_min_req_game">
+                            <p>Процессор: <span class="info_text_min_requirement">{{games.processor}}</span></p>
+                        </div>
+                        <div class="text_min_req_game">
+                            <p>Оперативная память: <span class="info_text_min_requirement">{{games.opMemory}}</span></p>
+                        </div>
+                        <div class="text_min_req_game">
+                            <p>Видеокарта: <span class="info_text_min_requirement">{{games.videoCard}}</span></p>
+                        </div>
+                        <div class="text_min_req_game">
+                            <p>Памяти на Жестком Диске: <span class="info_text_min_requirement">{{games.intMemory}}</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container_button_download">
+                    <div class="cont_button_link">
+                        <a class="link_download_game" href="{{games.file}}" download="">Скачать торрентом</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
